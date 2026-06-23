@@ -34,68 +34,217 @@
             </ul>
         </header>
         <main>
-            <section>
-                <section class="sidebar">
-                <div class="d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary" style="width: 280px;"> 
-                    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"> 
-                        <svg class="bi pe-none me-2" width="40" height="32" aria-hidden="true">
-                            <use xlink:href="#bootstrap"></use>
-                        </svg>
-                        <span class="fs-4">Windows-Reparaturbefehle</span> 
-                    </a> <hr> <ul class="nav nav-pills flex-column mb-auto"> 
-                        <li class="nav-item"> 
-                            <a href="#" class="nav-link active" aria-current="page"> 
-                                <svg class="bi pe-none me-2" width="16" height="16" aria-hidden="true">
-                                    <use xlink:href="#home"></use>
-                                </svg>
-                                Home
-                            </a> 
-                        </li> 
-                        <li> 
-                            <a href="#" class="nav-link link-body-emphasis"> 
-                                <svg class="bi pe-none me-2" width="16" height="16" aria-hidden="true">
-                                    <use xlink:href="#speedometer2"></use>
-                                </svg>
-                                Dashboard
-                            </a> 
-                        </li> 
-                        <li> 
-                            <a href="#" class="nav-link link-body-emphasis"> 
-                                <svg class="bi pe-none me-2" width="16" height="16" aria-hidden="true"><use xlink:href="#table"></use></svg>
-                                Orders
-                            </a> 
-                        </li> 
-                        <li> 
-                            <a href="#" class="nav-link link-body-emphasis"> 
-                                <svg class="bi pe-none me-2" width="16" height="16" aria-hidden="true"><use xlink:href="#grid"></use></svg>
-                                Products
-                            </a> 
-                        </li> 
-                        <li> 
-                            <a href="#" class="nav-link link-body-emphasis"> 
-                                <svg class="bi pe-none me-2" width="16" height="16" aria-hidden="true"><use xlink:href="#people-circle"></use></svg>
-                                Customers
-                            </a> 
-                        </li> 
-                    </ul> 
-                    <hr> 
-                    <div class="dropdown"> 
-                        <a href="#" class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"> 
-                            <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2"> 
-                            <strong>mdo</strong> 
-                        </a> 
-                        <ul class="dropdown-menu text-small shadow"> 
-                            <li><a class="dropdown-item" href="#">New project...</a></li> 
-                            <li><a class="dropdown-item" href="#">Settings</a></li> 
-                            <li><a class="dropdown-item" href="#">Profile</a></li> 
-                            <li><hr class="dropdown-divider"></li> 
-                            <li><a class="dropdown-item" href="#">Sign out</a></li> 
-                        </ul> 
-                    </div> 
+            <div class="parent">
+                <div class="div1">
+                    <div class="title"><h3>System File Checker</h3></div>
+                    <div class="description">
+                        <p>Der System File Checker (SFC) ist ein integriertes Windows-Tool, das dazu dient, 
+                        beschädigte oder fehlende Systemdateien zu erkennen und zu reparieren. 
+                        Es überprüft die Integrität der geschützten Systemdateien und ersetzt 
+                        beschädigte Dateien durch eine zwischengespeicherte Kopie, die sich in einem 
+                        komprimierten Ordner auf der Festplatte befindet.</p>
+                    </div>
+                    <div class="code"><code>sfc /scannow</code>            
+                    <button class="copyBtn" onclick="kopiereText(this, 'sfc /scannow')">
+                        <span class="btnText"><img src="./images/content_copy_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="Copy Symbol" width="24" height="24"></span>
+                    </button>
+</div>
+                    
                 </div>
-            </section>
-            </section>
+                <div class="div2">
+                    <div class="title"><h3>DISM (Deployment Image Servicing and Management) Repair Command</h3></div>
+                    <div class="description">
+                        <p>DISM ist ein Befehl, der verwendet wird, um das Windows-Image zu reparieren. 
+                            Er kann verwendet werden, um beschädigte Systemdateien zu ersetzen und das 
+                            Betriebssystem zu reparieren.</p>
+                    </div>
+                    <div class="code"><code>DISM /Online /Cleanup-Image /RestoreHealth</code>
+                    <button class="copyBtn" onclick="kopiereText(this, 'DISM /Online /Cleanup-Image /RestoreHealth')">
+                        <span class="btnText"><img src="./images/content_copy_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="Copy Symbol" width="24" height="24"></span>
+                    </button>
+                    </div>
+                </div>
+                <div class="div3">
+                    <div class="title"><h3>CHKDSK (Check Disk) Command</h3></div>
+                    <div class="description">
+                        <p>CHKDSK ist ein Befehl, der verwendet wird, um die Festplatte auf Fehler zu überprüfen 
+                            und diese zu reparieren.</p>
+                    </div>
+                    <div class="code"><code>CHKDSK C: /f /r</code>
+                    <button class="copyBtn" onclick="kopiereText(this, 'CHKDSK C: /f /r')">
+                        <span class="btnText"><img src="./images/content_copy_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="Copy Symbol" width="24" height="24"></span>
+                    </button>
+                    </div>
+                </div>
+                <div class="div4">
+                    <div class="title"><h3>Network Reset Command</h3></div>
+                    <div class="description">
+                        <p>Der Befehl "netsh winsock reset" dient dazu, den Winsock-Katalog zurückzusetzen und 
+                            Netzwerkprobleme zu beheben.</p>
+                    </div>
+                    <div class="code"><code>netsh winsock reset</code>
+                    <button class="copyBtn" onclick="kopiereText(this, 'netsh winsock reset')">
+                        <span class="btnText"><img src="./images/content_copy_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="Copy Symbol" width="24" height="24"></span>
+                    </button>
+                    </div>
+                </div>
+                <div class="div5">
+                    <div class="title"><h3>Flush DNS Cache</h3></div>
+                    <div class="description">
+                        <p>Der Befehl "ipconfig /flushdns" dient dazu, den DNS-Cache zu leeren und 
+                            Netzwerkprobleme zu beheben.</p>
+                    </div>
+                    <div class="code"><code>ipconfig /flushdns</code>
+                    <button class="copyBtn" onclick="kopiereText(this, 'ipconfig /flushdns')">
+                        <span class="btnText"><img src="./images/content_copy_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="Copy Symbol" width="24" height="24"></span>
+                    </button>
+                    </div>
+                </div>
+                <div class="div6">
+                    <div class="title"><h3>Release IP Address</h3></div>
+                    <div class="description">
+                        <p>Der Befehl "ipconfig /release" dient dazu, die aktuelle IP-Adresse freizugeben.</p>
+                    </div>
+                    <div class="code"><code>ipconfig /release</code>
+                        <button class="copyBtn" onclick="kopiereText(this, 'ipconfig /release')">
+                            <span class="btnText"><img src="./images/content_copy_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="Copy Symbol" width="24" height="24"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="div7">
+                    <div class="title"><h3>Renew IP Address</h3></div>
+                    <div class="description">
+                        <p>Der Befehl "ipconfig /renew" dient dazu, eine neue IP-Adresse zu erhalten.</p>
+                    </div>
+                    <div class="code">
+                        <code>ipconfig /renew</code>
+                            <button class="copyBtn" onclick="kopiereText(this, 'ipconfig /renew')">
+                                <span class="btnText"><img src="./images/content_copy_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="Copy Symbol" width="24" height="24"></span>
+                            </button>
+                    </div>
+                </div>
+                <div class="div8">
+                    <div class="title"><h3>Boot Repair</h3></div>
+                    <div class="description">
+                        <p>Der Befehl "bootrec /fixmbr" dient dazu, den Master Boot Record (MBR) zu reparieren.
+                            Der Befehl "bootrec /scannow" dient dazu, das System auf Fehler zu überprüfen.
+                            Der Befehl "bootrec /rebuildbcd" dient dazu, den Bootdatenbank-Eintrag zu rebuilden.</p>
+                    </div>
+                    <div class="code">
+                        <code>bootrec /fixmbr</code><button class="copyBtn" onclick="kopiereText(this, 'bootrec /fixmbr')">
+                            <span class="btnText"><img src="./images/content_copy_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="Copy Symbol" width="24" height="24"></span>
+                        </button>
+                    </div>
+                    <div class="code">
+                        <code>bootrec /scannow</code> <button class="copyBtn" onclick="kopiereText(this, 'bootrec /scannow')">
+                            <span class="btnText"><img src="./images/content_copy_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="Copy Symbol" width="24" height="24"></span>
+                        </button>
+                    </div>
+                    <div class="code">
+                        <code>bootrec /rebuildbcd</code><button class="copyBtn" onclick="kopiereText(this, 'bootrec /rebuildbcd')">
+                            <span class="btnText"><img src="./images/content_copy_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="Copy Symbol" width="24" height="24"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="div9">
+                    <div class="title"><h3>Driver Verification</h3></div>
+                    <div class="description">
+                        <p>Der Befehl "verifier" dient dazu, die Treiber zu überprüfen und Probleme zu diagnostizieren.</p>
+                    </div>
+                    <div class="code"><code>verifier</code>
+                        <button class="copyBtn" onclick="kopiereText(this, 'verifier')">
+                            <span class="btnText"><img src="./images/content_copy_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="Copy Symbol" width="24" height="24"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="div10">
+                    <div class="title"><h3>Memory Diagnostics</h3></div>
+                    <div class="description">
+                        <p>Der Befehl "mdsched.exe" dient dazu, den Arbeitsspeicher auf Fehler zu überprüfen.</p>
+                    </div>
+                    <div class="code"><code>mdsched.exe</code>
+                        <button class="copyBtn" onclick="kopiereText(this, 'mdsched.exe')">
+                            <span class="btnText"><img src="./images/content_copy_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="Copy Symbol" width="24" height="24"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="div11">
+                    <div class="title"><h3>Power Efficiency Report</h3></div>
+                    <div class="description">
+                        <p>Der Befehl "powercfg /energy" dient dazu, einen Bericht über die Energieeffizienz des Systems 
+                            zu erstellen.</p>
+                    </div>
+                    <div class="code"><code>powercfg /energy</code>
+                        <button class="copyBtn" onclick="kopiereText(this, 'powercfg /energy')">
+                            <span class="btnText"><img src="./images/content_copy_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="Copy Symbol" width="24" height="24"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="div12">
+                    <div class="title"><h3>Battery Health Report</h3></div>
+                    <div class="description">
+                        <p>Der Befehl "powercfg /batteryreport" dient dazu, einen Bericht über die Batteriegesundheit 
+                            des Systems zu erstellen.</p>
+                    </div>
+                    <div class="code"><code>powercfg /batteryreport</code>
+                        <button class="copyBtn" onclick="kopiereText(this, 'powercfg /batteryreport')">
+                            <span class="btnText"><img src="./images/content_copy_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="Copy Symbol" width="24" height="24"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="div13">
+                    <div class="title"><h3>Remove Temporary Files</h3></div>
+                    <div class="description">
+                        <p>Der Befehl "cleanmgr" dient dazu, temporäre Dateien zu entfernen und Speicherplatz freizugeben.</p>
+                    </div>
+                    <div class="code"><code>cleanmgr</code>
+                        <button class="copyBtn" onclick="kopiereText(this, 'cleanmgr')">
+                            <span class="btnText"><img src="./images/content_copy_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="Copy Symbol" width="24" height="24"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="div14">
+                    <div class="title"><h3>Event Viewer</h3></div>
+                    <div class="description">
+                        <p>Der Befehl "eventvwr.msc" dient dazu, den Ereignisanzeiger zu öffnen und Ereignisse zu überprüfen.</p>
+                    </div>
+                    <div class="code"><code>eventvwr.msc</code>
+                        <button class="copyBtn" onclick="kopiereText(this, 'eventvwr.msc')">
+                            <span class="btnText"><img src="./images/content_copy_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="Copy Symbol" width="24" height="24"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="div15">
+                    <div class="title"><h3>System Information</h3></div>
+                    <div class="description">
+                        <p>Der Befehl "msinfo32" dient dazu, Informationen über das System zu erhalten.</p>
+                    </div>
+                    <div class="code"><code>msinfo32</code>
+                        <button class="copyBtn" onclick="kopiereText(this, 'msinfo32')">
+                            <span class="btnText"><img src="./images/content_copy_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="Copy Symbol" width="24" height="24"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </main>
         <script src="./js/bootstrap.bundle.min.js"></script>
+
+        <script>
+            function kopiereText(btn, text) {
+                // btn ist der Button, der geklickt wurde
+                const span = btn.querySelector('.btnText');
+                const originalContent = span.innerHTML;
+
+                navigator.clipboard.writeText(text).then(() => {
+                    span.innerText = "✓";
+                    btn.disabled = true;
+
+                    setTimeout(() => {
+                    span.innerHTML = originalContent; // Setzt das Icon/Text zurück
+                    btn.disabled = false;
+                    }, 2000);
+                });
+            }
+        </script>
     </body>
 </html>
