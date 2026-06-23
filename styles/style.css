@@ -1,17 +1,178 @@
+:root {
+    --header-color: #d8c3a5;
+    --sidebar-color: #eae7dc;
+    --background-color: #e98074;
+    --information-color: #8e8d8a;
+    --card-color: #a0c1df;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+h3 {
+    text-decoration:underline;
+}
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #ffffff;
+    background-color: var(--background-color);
     color: #333333;
 }
 
 header {
-    background-color: #FFF7C5;
+    background-color: var(--header-color);
     padding: 20px;
     text-align: center;
+}
+
+main {
+    display: flex;
+    min-width: 100vh;
+}
+
+.sidebar {
+    background-color: var(--sidebar-color);
+    padding: 20px;
+    width: 280px;
+    flex-shrink: 0;
+    height: 100vh;
+    position: sticky;
+}
+
+.information {
+    background-color: var(--information-color);
+    padding: 20%;
+    margin: 20px;
+    border-radius: 5px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    padding: 15px;
+    background-color: var(--card-color);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.information h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.information p {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.index {
+    height: 88vh;
+}
+
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+.parent>div {
+    background-color: var(--card-color);
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    height: auto;
+}
+.description {
+    margin-top: auto;
+    height: 40%;
+}
+.code {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    height: 30%;
+}
+
+kbd {
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
+    color: #333;
+    display: inline-block;
+    font-family: monospace;
+    font-size: 0.85em;
+    line-height: 1;
+    padding: 2px 6px;
+    white-space: nowrap;
+}
+
+.tastenkombi-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tastenkombi-info {
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+  /* Optionales Styling für ein besseres Aussehen */
+  button {
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 50px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+
+  }
+  button:disabled {
+    cursor: default;
+    background-color: #e0e0e0;
+  }
+
+  /* Sidebar-spezifischer Active-Status */
+.sidebar .nav-link.sidebar-active {
+    background-color: #0d6efd !important; /* Dein gewünschtes Blau */
+    color: white !important;
+}
+
+/* Ersetze w-100 durch flex-grow-1, damit der Content nur den *verbleibenden* Platz einnimmt */
+#content-area {
+    flex-grow: 1; /* Nimmt den restlichen Platz ein, drängt die Sidebar nicht weg */
+    padding: 20px;
+    overflow-y: auto; /* Falls die Karten zu lang sind, scrollt nur dieser Bereich */
+}
+
+/* Dein Grid-Container muss jetzt nicht mehr 100vw breit sein */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding-top: 20px;
 }
